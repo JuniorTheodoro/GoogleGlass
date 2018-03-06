@@ -9,6 +9,20 @@ body {
 	background-color: rgb(154,123,213);
 }
 
+div#interface { /*auto serve para calcular as distancias automaticamente que restam da div do body*/
+	width: 1000px;
+	background-color: #ffffff;
+	margin: -20px auto 0px auto;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	padding: 10px;
+}
+
+img#icone { /*faz o oculos flutuar*/
+	position: absolute;
+	top: 100px;
+	left: 900px;
+}
+
 figure.foto-legenda{
 	border: 8px solid red;
 	box-shadow: 1px 1px 50px black;
@@ -29,6 +43,7 @@ figure.foto-legenda figcaption{
 	height: 100%;
 	padding: 10px;
 	opacity: 0;
+	box-sizing: border-box;
 	transition: opacity 0.5s;
 }
 
@@ -36,26 +51,39 @@ figure.foto-legenda:hover figcaption{
 	opacity: 1;
 }
 
-div#azul{
-	width: 150px;
-	height: 150px;
-	background-color: blue;
+nav#menu {
+	display: block; /*bloco pode flutuar pela tela*/
 }
 
-div#verde{
-	width: 150px;
-	height: 150px;
-	background-color: green;
+nav#menu h1{
+	display: none;
 }
 
-div#vermelho{
-	width: 150px;
-	height: 150px;
-	background-color: red;
+nav#menu ul{
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -20px;
+	left: 500px;
 }
 
-div#amarelo{
-	width: 75px;
-	height: 75px;
-	background-color: yellow;
+nav#menu li{
+	display: inline-block;
+	background-color: #dddddd;
+	padding: 10px;
+	margin: 2px;
+	transition: background-color 1px;
+}
+
+nav#menu li:hover {
+	background-color: #606060;
+}
+
+nav#menu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+nav#menu a:hover {
+	color: #ffffff;
 }
