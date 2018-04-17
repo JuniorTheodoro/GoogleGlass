@@ -2,9 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8" lang="pt-br">
+    
     <link rel="stylesheet" type="text/css" href="_css/estilo.css">
-    <script language="javascript" src="_javascript/funcoes.js"></script>
-    <title>Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/specs.css">
+    <title>Meu Site</title>
+    <script type="text/javascript">
+        function trocarimagem(imagem){
+            document.getElementById("icone").src = imagem;
+        }
+    </script>
 </head>
 <body>
 <div id="interface">
@@ -13,30 +19,52 @@
         <h1>Google Glass</h1>
         <h2>A revolução do Google está chegando</h2>
 
-        <img id="icone" src="_imagens/especificacoes.png"/>
+    <img id="icone" src="_imagens/especificacoes.png"/>
     
-    <nav id="menu"> 
+<nav id="menu"> 
     <h1>Menu Principal</h1>
     <ul>
-        <li onmouseover = "trocar('_imagens/glass-oculos-preto-peq.png')" onmouseout="trocar('_imagens/especificacoes.png')"><a href="fotos.html"><a href="index.html">Home</a></li>
-        <li><a href="specs.html">Especificações</a></li>
-        <li onmouseover = "trocar('_imagens/fotos.png')" onmouseout="trocar('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
-        <li onmouseover = "trocar('_imagens/multimidia.png')" onmouseout="trocar('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
-        <li onmouseover = "trocar('_imagens/contato.png')" onmouseout="trocar('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+        <li><a onmouseover = "trocarimagem('_imagens/glass-oculos-preto-peq.png')" onmouseout="trocarimagem('_imagens/especificacoes.png')" href="index.html">Home</a></li>
+        
+        <li><a onmouseover = "trocarimagem('_imagens/especificacoes.png')" onmouseout="trocarimagem('_imagens/especificacoes.png')" href="specs.html">Especificações</a></li>
+
+        <li><a onmouseover = "trocarimagem('_imagens/fotos.png')" onmouseout="trocarimagem('_imagens/especificacoes.png')" href="fotos.html">Fotos</a></li>
+
+        <li><a onmouseover = "trocarimagem('_imagens/multimidia.png')" onmouseout="trocarimagem('_imagens/especificacoes.png')" href="multimidia.html">Multimídia</a></li>
+
+        <li><a onmouseover = "trocarimagem('_imagens/contato.png')" onmouseout="trocarimagem('_imagens/especificacoes.png')" href="fale-conosco.html">Fale conosco</a></li>
     </ul>
     </nav>
 </header>
-Glass > Especificações
-Raio-X no Google Glass
-por Lucas Mucida
-Atualizado em 23/Fevereiro/2016
+<body>
+<section id="corpo-full">
+	<article id="noticia-principal">
+		<header>
+			<hgroup>
+    		<h3>Glass > Especificações</h3>
+			<h1>Raio-X no Google Glass</h1>
+			<h2>por Lucas Mucida</h2>
+			<h3 class="direita">Criado em 20/Fevereiro/2016</h3>
+			</hgroup>
+		</header>
+	
+	<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
 
-Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
-
-[AQUI ENTRA UMA IMAGEM]
-
-Copyright 2016 - by Lucas Mucida<
-Facebook | Twitter
-</div>
+	<section id="conteudo">
+		<img src="_imagens/glass-esquema-marcado.jpg" usemap="meuMapa">
+		<iframe src="google-glass.html" name="janela" id="frame-spec" scrolling="no"></iframe>
+        <map name="meuMapa">
+            <area shape="rect" coords="179,209,267,257" target="janela" href="google-glass.html#tela">
+            <area shape="circle" coords="157,243,10" target="janela" href="google-glass.html#camera">
+            <area shape="circle" coords="76,51,10" target="janela" href="google-glass.html#bateria">
+            <area shape="poly" coords="27,143,83,216,83,253,27,168" target="janela" href="google-glass.html#sensores">
+        </map>
+	</section>
+</article>
+</section>
+    <footer id="rodape">
+        Copyright 2016 - by Lucas Mucida
+		Facebook | Twitter
+    </footer>
 </body>
 </html>
