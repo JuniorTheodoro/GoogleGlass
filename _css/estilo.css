@@ -193,3 +193,11 @@ header#cabecalho-artigo h3{
 header#cabecalho-artigo h3.direita{
 	text-align: right;
 }
+div#tv1 video#filme1{
+	width: 580px;
+	margin: auto;
+}
+div#tv2 video#filme2{
+	width: 370px;
+	margin: auto;
+}
