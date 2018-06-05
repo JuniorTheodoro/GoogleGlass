@@ -26,42 +26,85 @@
     </ul>
     </nav>
 </header>
+<section>
+    <article>
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Lucas Mucida</h2>
+                <h3>Atualizado em 23/Fevereiro/2016</h3>
+            </hgroup>
+        </header>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Lucas Mucida
-Atualizado em 23/Fevereiro/2016
+<form>
+    <fieldset id="usuario">
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+        <legend>Identificação do Usuário</legend>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+            <p><label for="campoNome">Nome:</label><input type="text" name="txtNome" id="campoNome" size="20" maxlength="25" placeholder="Nome Completo"></p>
+            <p><label for="campoPass">Senha:</label><input type="password" name="txtPass" id="campoPass" size="8" maxlength="8" placeholder="8 dígitos"></p>
+            <p><label for="campoEmail">E-mail:</label><input type="E-mail" name="txtEmail" id="campoEmail" size="20" maxlength="40" placeholder="E-mail"></p>
+            <p>Sexo:
+                <input type="radio" name="rdbSexo" id="campoSM" checked="true"><label for="campoSM">Masculino</label>
+                <input type="radio" name="rdbSexo" id="campoSF"><label for="campoSF">Femenino</label>
+            </p>
+            <p><label for="campoData">Data de Nascimento:</label><input type="date" name="txtData" id="campoData"></p>
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+    </fieldset>
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+    <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+
+            <p><label for="campoLog">Logradouro:</label><input type="text" name="txtLog" id="campoLog" size="13" maxlength="80" placeholder="Rua/Av/etc"></p>
+            <p><label for="campoN">Número:</label><input type="number" name="txtN" id="campoN" min="0" max="99999"></p>
+            <p><label for="campoEstado">Estado:</label>
+                <select name="txtEstado" id="campoEstado">
+                    <optgroup label="Região Sudeste">
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="PE">Pernambuco</option>
+                    </optgroup>
+                </select></p>
+
+            <p><label>Cidade:</label><input type="text" name="txtCidade" id="campoCidade" size="20" maxlength="40" placeholder="Cidade" list="cidades">
+                <datalist id="cidades">
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Viçosa"></option>
+                    <option value="Belo Horizonte"></option>
+                    <option value="Visconde do Rio Branco"></option>
+                    <option value="Vitória"></option>
+                </datalist>
+    </fieldset>
+
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+            <p><label for="campoGrau">Grau de Urgência:</label>min <input type="range" name="txtGrau" id="campoGrau" min="0" max="10" step="1"></input> max</p>
+            <p><label for="campoMsg">Mensagem:</label><textarea name="txtMsg" id="campoMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+    </fieldset>
+
+    <fieldset id="">
+        <legend>Quero um Google Glass</legend>
+            Gostaria de adquirir um Google Glass quando disponível
+            Cor:
+            Quantidade:
+            Preço Total: R$
+    </fieldset>
 
 
 [BOTÃO ENVIAR]
-
-Copyright 2016 - by Lucas Mucida
-Facebook | Twitter
+</form>
+    </article>
+</section>
+<footer id="rodape"> 
+    Copyright 2016 - by Lucas Mucida
+    Facebook | Twitter
+</footer>
 </div>
 </body>
 </html>
