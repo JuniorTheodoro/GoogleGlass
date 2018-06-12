@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" lang="pt-br">
     <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
     <script language="javascript" src="_javascript/funcoes.js"></script>
     <title>Google Glass</title>
 </head>
@@ -37,7 +38,7 @@
             </hgroup>
         </header>
 
-<form>
+<form oninput="calculaTotal()">
     <fieldset id="usuario">
 
         <legend>Identificação do Usuário</legend>
@@ -72,7 +73,7 @@
                     </optgroup>
                 </select></p>
 
-            <p><label>Cidade:</label><input type="text" name="txtCidade" id="campoCidade" size="20" maxlength="40" placeholder="Cidade" list="cidades">
+            <p><label for="campoCidade">Cidade:</label><input type="text" name="txtCidade" id="campoCidade" size="20" maxlength="40" placeholder="Cidade" list="cidades">
                 <datalist id="cidades">
                     <option value="Rio de Janeiro"></option>
                     <option value="Viçosa"></option>
@@ -88,16 +89,16 @@
             <p><label for="campoMsg">Mensagem:</label><textarea name="txtMsg" id="campoMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
     </fieldset>
 
-    <fieldset id="">
+    <fieldset id="pedido">
         <legend>Quero um Google Glass</legend>
-            Gostaria de adquirir um Google Glass quando disponível
-            Cor:
-            Quantidade:
-            Preço Total: R$
+            <p><input type="checkbox" name="txtAdiquirir" id="campoAdiquirir" checked="true"></input><label for="campoAdiquirir">Gostaria de adquirir um Google Glass quando disponível</label></p>
+            <p><label for="campoCor">Cor:</label><input type="color" name="txtCor" id="CampoCor" value="#0000FF"><input</p>
+            <p><label for="campoQtd">Quantidade:</label><input type="number" name="txtQtd" id="campoQtd" min="0" max="5"></input></p>
+            <p><label for="campoPreto">Preço Total: R$</label><input type="text" name="txtPreto" id="campoPreco" placeholder="Total a pagar" readonly="true"></input></p>
     </fieldset>
 
 
-[BOTÃO ENVIAR]
+<input type="image" name="botao-enviar" src="_imagens/botao-enviar.png"></input>
 </form>
     </article>
 </section>
